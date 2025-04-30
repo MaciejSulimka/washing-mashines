@@ -1,5 +1,8 @@
 # React + TypeScript + Vite
 
+____START JSON SERVER____
+json-server --watch washingMachines.json --port 8080
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

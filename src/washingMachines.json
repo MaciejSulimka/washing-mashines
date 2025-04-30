@@ -1,0 +1,260 @@
+{
+  "washingMachines": [
+    {
+      "id": 1,
+      "modelCode": "WW90T654DLH",
+      "name": "Pralka EcoBubble™",
+      "capacity": 8,
+      "maxCapacity" : 9,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 60,
+        "height": 85
+    },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny"
+      ],
+      "energyClass": "C",
+      "price": 3199.00,
+      "monthlyInstallment": 33.31,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp"
+    },
+    {
+      "id": 2,
+      "modelCode": "WW90T754ABT",
+      "name": "Pralka QuickDrive™",
+      "capacity": 9,
+      "maxCapacity" : 9,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 65,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny",
+        "Turbo Wir 3000"
+      ],
+      "energyClass": "A",
+      "price": 3799.00,
+      "monthlyInstallment": 63.31,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp"
+    },
+    {
+      "id": 3,
+      "modelCode": "WW10T654DHL",
+      "name": "Pralka EcoBubble™",
+      "capacity": 10.5,
+      "maxCapacity" : 10.5,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 60,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny"
+      ],
+      "energyClass": "B",
+      "price": 3399.00,
+      "monthlyInstallment": 56.31,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp"
+    },
+    {
+      "id": 4,
+      "modelCode": "WW90T654DLH",
+      "name": "Pralka EcoBubble™",
+      "capacity": 8,
+      "maxCapacity" : 8,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 60,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny"
+      ],
+      "energyClass": "F",
+      "price": 2999.00,
+      "monthlyInstallment": 49.91,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp"
+    },
+    {
+      "id": 5,
+      "modelCode": "WW90T754ABT",
+      "name": "Pralka QuickDrive™",
+      "capacity": 9,
+      "maxCapacity" : 9,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 65,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny",
+        "Turbo Wir 3000"
+      ],
+      "energyClass": "D",
+      "price": 3599.00,
+      "monthlyInstallment": 59.91,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp"
+    },
+    {
+      "id": 6,
+      "modelCode": "WW10T654DLH",
+      "name": "Pralka EcoBubble™",
+      "capacity": 10.5,
+      "maxCapacity" : 10.5,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 60,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny"
+      ],
+      "energyClass": "E",
+      "price": 3299.00,
+      "monthlyInstallment": 54.91,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp"
+    },
+    {
+      "id": 7,
+      "modelCode": "WW10T654DLHG",
+      "name": "Pralka EcoBubble™",
+      "capacity": 10.5,
+      "maxCapacity" : 10.5,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 60,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny"
+      ],
+      "energyClass": "E",
+      "price": 3299.00,
+      "monthlyInstallment": 54.91,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp"
+    },
+    {
+      "id": 8,
+      "modelCode": "WW90T754ABTG",
+      "name": "Pralka QuickDrive™",
+      "capacity": 10,
+      "maxCapacity" : 10,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 65,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny",
+        "Turbo Wir 3500"
+      ],
+      "energyClass": "A",
+      "price": 4599.00,
+      "monthlyInstallment": 76.65,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp"
+    },
+    {
+      "id": 9,
+      "modelCode": "WW90T754ABTV",
+      "name": "Pralka QuickDrive™",
+      "capacity": 10,
+      "maxCapacity" : 10,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 65,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny",
+        "Turbo Wir 3000"
+      ],
+      "energyClass": "B",
+      "price": 4099.00,
+      "monthlyInstallment": 68.15,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp"
+    }
+  ]
+}
