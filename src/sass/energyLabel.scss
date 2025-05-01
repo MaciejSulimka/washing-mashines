@@ -1,0 +1,51 @@
+.energyLabel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 50px;
+    height: auto;
+    fill: var(--samsungGreen);
+  }
+  &__energyColor--A {
+    fill: var(--samsungGreen) !important;
+  }
+  &__energyColor--B {
+    fill: #50B848 !important;
+  }
+  &__energyColor--C {
+    fill: #BFD730 !important;
+  }
+  &__energyColor--D {
+    fill: #FFF200 !important;
+  }
+  &__energyColor--E {
+    fill: #FDB913 !important;
+  }
+  &__energyColor--F {
+    fill: #F36F21 !important;
+  }
+  &__energyColor--default {
+    fill: var(--samsungGreen) !important;
+  }
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &--text {
+      margin-left: 0.6em;
+
+      font-family: SamsungOne-700, sans-serif;
+      color: var(--samsungWhite);
+      font-size: 1.2rem;
+      -webkit-text-stroke: 0.2px var(--samsungDark);
+    }
+  }
+}

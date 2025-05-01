@@ -19,14 +19,15 @@
         "Wyświetlacz elektroniczny"
       ],
       "energyClass": "C",
-      "price": 3199.00,
+      "price": 3199.50,
       "monthlyInstallment": 33.31,
       "numberOfInstallments": 60,
       "promotion": {
         "startDate": "01-08-2022",
         "endDate": "07-08-2022"
       },
-      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp"
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp",
+      "imageAltText": "Front-loading white washing machine with a black door and control panel on top"
     },
     {
       "id": 2,
@@ -55,7 +56,8 @@
         "startDate": "01-08-2022",
         "endDate": "07-08-2022"
       },
-      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp"
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp",
+      "imageAltText": "White front-loading washing machine with a large black door and sleek control panel"
     },
     {
       "id": 3,
@@ -83,7 +85,8 @@
         "startDate": "01-08-2022",
         "endDate": "07-08-2022"
       },
-      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp"
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp",
+      "imageAltText": "Front-loading white washing machine with a black door and control panel on top"
     },
     {
       "id": 4,
@@ -111,7 +114,8 @@
         "startDate": "01-08-2022",
         "endDate": "07-08-2022"
       },
-      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp"
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp",
+      "imageAltText": "Front-loading white washing machine with a black door and control panel on top"
     },
     {
       "id": 5,
@@ -140,7 +144,8 @@
         "startDate": "01-08-2022",
         "endDate": "07-08-2022"
       },
-      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp"
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp",
+      "imageAltText": "White front-loading washing machine with a large black door and sleek control panel"
     },
     {
       "id": 6,
@@ -168,7 +173,8 @@
         "startDate": "01-08-2022",
         "endDate": "07-08-2022"
       },
-      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp"
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp",
+      "imageAltText": "Front-loading white washing machine with a black door and control panel on top"
     },
     {
       "id": 7,
@@ -196,7 +202,8 @@
         "startDate": "01-08-2022",
         "endDate": "07-08-2022"
       },
-      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp"
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp",
+      "imageAltText": "Front-loading white washing machine with a black door and control panel on top"
     },
     {
       "id": 8,
@@ -225,7 +232,8 @@
         "startDate": "01-08-2022",
         "endDate": "07-08-2022"
       },
-      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp"
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp",
+      "imageAltText": "White front-loading washing machine with a large black door and sleek control panel"
     },
     {
       "id": 9,
@@ -254,7 +262,8 @@
         "startDate": "01-08-2022",
         "endDate": "07-08-2022"
       },
-      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp"
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp",
+      "imageAltText": "White front-loading washing machine with a large black door and sleek control panel"
     }
   ]
 }

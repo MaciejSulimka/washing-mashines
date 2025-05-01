@@ -1,5 +1,5 @@
 
-export function Footer() {
+const Footer = (): JSX.Element => {
 
     return(
         <footer>
@@ -7,3 +7,5 @@ export function Footer() {
         </footer>
     );
 };
+
+export default Footer;

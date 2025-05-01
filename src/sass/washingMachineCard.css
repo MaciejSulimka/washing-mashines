@@ -1,0 +1,46 @@
+.washingMachineCard {
+  background-color: var(--samsungWhite);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 4em 2em 3em;
+  border-radius: 2rem;
+}
+.washingMachineCard__image {
+  width: 200px;
+  height: auto;
+}
+.washingMachineCard__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.washingMachineCard__details--name {
+  font-family: SamsungOne-700, sans-serif;
+  color: var(--textBlackColor);
+  font-size: 1.8rem;
+  padding-right: 3em;
+}
+.washingMachineCard__specification--capacity, .washingMachineCard__specification--dimensions, .washingMachineCard__specification--functions {
+  margin: 0.3em 0;
+  font-size: 1.2rem;
+  color: var(--textGreyColor);
+  font-family: SamsungOne-400, sans-serif;
+}
+.washingMachineCard__specification--capacity strong, .washingMachineCard__specification--dimensions strong, .washingMachineCard__specification--functions strong {
+  font-weight: normal;
+  font-family: SamsungOne-700, sans-serif;
+  color: var(--textBlackColor);
+}
+.washingMachineCard__energyClass {
+  display: flex;
+  gap: 1rem;
+}
+.washingMachineCard__energyClass--text {
+  color: var(--textGreyColor);
+  font-family: SamsungOne-400, sans-serif;
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=washingMachineCard.css.map */

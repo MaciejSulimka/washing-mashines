@@ -1,0 +1,51 @@
+.washingMachineCard {
+  background-color: var(--samsungWhite);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 4em 2em 3em;
+  border-radius: 2rem;
+  &__image {
+    width: 200px;
+    height: auto;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    &--name {
+      font-family: SamsungOne-700, sans-serif;
+      color: var(--textBlackColor);
+      font-size: 1.8rem;
+      padding-right: 3em;
+    }
+  }
+
+  &__specification {
+    &--capacity, &--dimensions, &--functions {
+      margin: .3em 0;
+
+      font-size: 1.2rem;
+      color: var(--textGreyColor);
+      font-family: SamsungOne-400, sans-serif;
+      strong {
+
+        font-weight: normal;
+        font-family: SamsungOne-700, sans-serif;
+        color: var(--textBlackColor);
+      }
+    }
+  }
+  &__energyClass {
+    display: flex;
+    gap: 1rem;
+
+    &--text {
+      color: var(--textGreyColor);
+      font-family: SamsungOne-400, sans-serif;
+      font-size: 1.2rem;
+
+    }
+  }
+}

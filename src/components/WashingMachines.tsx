@@ -1,35 +1,12 @@
 import {useEffect, useState} from "react";
+import '../sass/washingMachines.css';
 
-type Dimensions = {
-    depth: number;
-    width: number;
-    height: number;
-}
+import { WashingMachine } from '../types/types';
+import WashingMachineCard from "./WashingMachineCard";
 
-// for now string, maybe change later
-type Promotion = {
-   startDate: string;
-   endDate: string;
-}
 
-type WashingMachine = {
-    id: number;
-    modelCode: string;
-    name: string;
-    capacity: number;
-    maxCapacity: number;
-    color: string;
-    functions: string[];
-    energyClass: string;
-    price: number;
-    monthlyInstallment: number;
-    numberOfInstallments: number;
-    promotion: Promotion;
-    dimensions: Dimensions;
-    image: string;
-}
+const WashingMachines = (): JSX.Element => {
 
-export function WashingMachines() {
     const [washingMachines, setWashingMachines] = useState<WashingMachine[]>([])
     const [loading, setLoading] = useState<boolean>(true);
 
@@ -57,17 +34,16 @@ export function WashingMachines() {
     )
 
     return(
-        <main>
-            {washingMachines.map((device) => (
-                <div>
-                    <h2>{device.name}</h2>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <p>{device.functions}</p>
-                </div>
-            ))}
+        <main className="washingMachines">
+            <div className="washingMachines__container">
+
+                {washingMachines.map((device) => (
+                    <WashingMachineCard device={device} key={device.id}/>
+                ))}
+            </div>
 
         </main>
     );
 };
+
+export default WashingMachines;
