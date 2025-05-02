@@ -1,9 +1,10 @@
 import {useEffect, useState} from "react";
 import '../sass/washingMachines.css';
 
-import { WashingMachine, Filters} from '../types/types';
+import {WashingMachine, Filters} from '../types/types';
 import WashingMachineCard from "./WashingMachineCard";
 import washingMachineCard from "./WashingMachineCard";
+import CustomDropdown from "./CustomDropdown";
 
 
 const WashingMachines = (): JSX.Element => {
@@ -11,11 +12,11 @@ const WashingMachines = (): JSX.Element => {
     const [washingMachines, setWashingMachines] = useState<WashingMachine[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [selectedDevice, setSelectedDevice] = useState<number[]>([]);
-    const [filters, setFilters] =  useState<Filters>({
+    const [filters, setFilters] = useState<Filters>({
         query: '',
         popularity: '',
         energyClass: '',
-        capacity: null,
+        capacity: 0,
         functions: '',
         sort: '',
     });
@@ -35,14 +36,14 @@ const WashingMachines = (): JSX.Element => {
                 setLoading(false);
             }
         };
-       fetchWashingMachines();
-    },[])
+        fetchWashingMachines();
+    }, [])
 
     const toggleSelected = (id: number) => {
         setSelectedDevice((previouslySelected) => {
             const isSelected = previouslySelected.includes(id);
 
-            if(isSelected) {
+            if (isSelected) {
                 return previouslySelected.filter((selectedId) => selectedId !== id);
             } else {
                 return [...previouslySelected, id]
@@ -54,49 +55,68 @@ const WashingMachines = (): JSX.Element => {
 
         const fitQuery = device.name.toLowerCase().includes(filters.query.toLowerCase()) || device.modelCode.toLowerCase().includes(filters.query.toLowerCase()) || !filters.query
         const fitsEnergy = device.energyClass === filters.energyClass || !filters.energyClass;
-        const fitsCapacity = filters.capacity == null || device.maxCapacity === filters.capacity;
+        const fitsCapacity = filters.capacity === 0 || device.maxCapacity === filters.capacity;
         const fitFunctions = device.functions.includes(filters.functions) || !filters.functions;
 
-        return(
+        return (
             fitQuery && fitFunctions && fitsEnergy && fitsCapacity
-    );
+        );
     })
         .sort((a, b) => {
-            if(filters.sort === 'price') {
-                return(
+            if (filters.sort === 'price') {
+                return (
                     a.price - b.price
                 );
             }
-            if(filters.sort === 'capacity') {
-                return(
+            if (filters.sort === 'capacity') {
+                return (
                     b.capacity - a.capacity
                 );
             }
             return 0;
         })
 
-    if(loading) return(
+    if (loading) return (
         <div>
-           ŁADOWANIE PRALECZEK MILORDZIE
+            ŁADOWANIE PRALECZEK MILORDZIE
         </div>
     )
 
     console.log(washingMachines)
     console.log(filteredMachines)
 
-    return(
+    return (
         <main className="washingMachines">
-            <div>
-                <select value={filters.sort} onChange={e => {setFilters(previous => ({...previous, sort: e.target.value}))}}>
-                    <option value="">Sortuj po:</option>
-                    <option value="price">Cena</option>
-                    <option value="capacity">Pojemnność</option>
-                </select>
+            <div className="washingMachines__filters">
+                <CustomDropdown label="Sortuj po:" option={["price", "capacity"]} select={filters.sort} onChange={(value => {
+                    setFilters(previous => ({...previous, sort: value}) )
+                })}/>
+                <CustomDropdown label="Funkcje:"
+                                option={["Drzwi AddWash", "Panel AI Control", "Silnik inwererowy", "Wyświetlacz elektroniczny", "Turbo Wir 3000", "Turbo Wir 3500"]}
+                                select={filters.functions} onChange={(value) => {
+                    setFilters((previous) => ({...previous, functions: value}))
+                }}/>
+                <CustomDropdown label="Klasa energetyczna:"
+                                option={["A", "B", "C", "D", "E", "F" ]}
+                                select={filters.energyClass} onChange={(value) => {
+                    setFilters((previous) => ({...previous, energyClass: value}))
+                }}/>
+                <CustomDropdown label="Pojemność:"
+                                option={["7kg", "8kg", "9kg", "10,5kg"]}
+                                select={filters.capacity === 0 ? "" : `${filters.capacity.toString().replace('.', ",")}kg`} onChange={(value) => {
+                    //STUPID AS HELL I WOULD TURN BACK TIME AND MAKE CAPACITY AS STRING
+                    const numericName = value.replace("kg", '').replace(",",".");
+                    const numeric = numericName ? parseFloat(numericName) : 0;
+                    setFilters((previous) => ({...previous, capacity: numeric}));
+                }}
+                />
+
             </div>
-            <h2>{washingMachines.length}</h2>
+            <h2>{filteredMachines.length}</h2>
             <div className="washingMachines__container">
                 {filteredMachines.map((device) => (
-                    <WashingMachineCard device={device} key={device.id} isSelected={selectedDevice.includes(device.id)} handleTogglle={() => toggleSelected(device.id)}/>
+                    <WashingMachineCard device={device} key={device.id} isSelected={selectedDevice.includes(device.id)}
+                                        handleTogglle={() => toggleSelected(device.id)}/>
                 ))}
             </div>
 

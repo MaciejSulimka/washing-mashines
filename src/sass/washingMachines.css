@@ -12,5 +12,12 @@
   gap: 2rem;
   padding: 1rem;
 }
+.washingMachines__filters {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem;
+}
 
 /*# sourceMappingURL=washingMachines.css.map */

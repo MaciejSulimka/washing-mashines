@@ -14,4 +14,12 @@
     padding: 1rem;
   }
 
+  &__filters {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+  }
+
 }

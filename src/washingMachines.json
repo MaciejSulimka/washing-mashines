@@ -210,7 +210,7 @@
       "modelCode": "WW90T754ABTG",
       "name": "Pralka QuickDrive™",
       "capacity": 10,
-      "maxCapacity" : 10,
+      "maxCapacity" : 10.5,
       "color": "biała",
       "dimensions": {
         "depth": 55,
@@ -240,7 +240,7 @@
       "modelCode": "WW90T754ABTV",
       "name": "Pralka QuickDrive™",
       "capacity": 10,
-      "maxCapacity" : 10,
+      "maxCapacity" : 10.5,
       "color": "biała",
       "dimensions": {
         "depth": 55,
