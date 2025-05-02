@@ -41,7 +41,6 @@
 
   }
   &__option {
-    min-width: 250px;
     background-color: var(--samsungWhite);
     padding: 0.7em 1em;
     font-family: SamsungOne-400, sans-serif;
@@ -53,6 +52,7 @@
   li, ul {
     list-style: none;
     transition: background-color 0.3s;
+    width: 100%;
   }
 
   li:hover {

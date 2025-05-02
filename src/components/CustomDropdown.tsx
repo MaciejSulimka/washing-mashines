@@ -1,6 +1,6 @@
 import {useState} from "react";
 import '../sass/customDropdown.css';
-import arrow from '../img/icons/arrow.svg';
+import ArrowIcon from '../img/icons/arrow.svg?react';
 
 const CustomDropdown = ({label, option, select, onChange}: {label: string; option: string[]; select: string; onChange: (value: string) => void}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -15,7 +15,7 @@ const CustomDropdown = ({label, option, select, onChange}: {label: string; optio
             <label className="customDropdown__label">{label}</label>
             <div className="customDropdown__mainOption customDropdown__option" onClick={() => setIsOpen(previous => ! previous)}>
                 {select || "Pokaż wszystkie"}
-                <img className={`customDropdown__mainOption__icon${isOpen ? '--rotated' : ''}`} src={arrow} alt="arrow icon"/>
+                <ArrowIcon className={`customDropdown__mainOption__icon${isOpen ? '--rotated' : ''}`} alt="arrow icon" style={{fill: '#8D8D8D'}}/>
             </div>
             {isOpen &&(
                 <>

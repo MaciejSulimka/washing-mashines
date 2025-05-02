@@ -1,0 +1,40 @@
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 0;
+
+  .loader {
+    width: 59px;
+    aspect-ratio: 1;
+    --_g: no-repeat radial-gradient(circle closest-side, var(--samsungBlue) 90%,#0000);
+    background:
+            var(--_g) -1%   50%,
+            var(--_g) 49%  50%,
+            var(--_g) 99% 50%;
+    background-size: calc(99%/3) 50%;
+    animation: l2 1s infinite linear;
+  }
+  @keyframes l2 {
+    19%{background-position:0%   0%, 50%  50%,100%  50%}
+    39%{background-position:0% 100%, 50%   0%,100%  50%}
+    59%{background-position:0%  50%, 50% 100%,100%   0%}
+    79%{background-position:0%  50%, 50%  50%,100% 100%}
+  }
+}
+.withBottomMargin {
+  padding: 1em 0;
+}

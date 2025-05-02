@@ -9,6 +9,9 @@
   &__image {
     width: 200px;
     height: auto;
+    background-color: var(--samsungWhite);
+    aspect-ratio: 200/159;
+    object-fit: contain;
   }
   &__details {
     display: flex;
