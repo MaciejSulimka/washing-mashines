@@ -32,6 +32,6 @@ export type Filters = {
     query: string;
     energyClass: string;
     functions: string;
-    // capacity: number;
+    capacity: number | null;
     sort: string;
 }

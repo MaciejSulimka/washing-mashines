@@ -15,7 +15,7 @@ const WashingMachines = (): JSX.Element => {
         query: '',
         popularity: '',
         energyClass: '',
-        // capacity: 0,
+        capacity: null,
         functions: '',
         sort: '',
     });
@@ -54,12 +54,11 @@ const WashingMachines = (): JSX.Element => {
 
         const fitQuery = device.name.toLowerCase().includes(filters.query.toLowerCase()) || device.modelCode.toLowerCase().includes(filters.query.toLowerCase()) || !filters.query
         const fitsEnergy = device.energyClass === filters.energyClass || !filters.energyClass;
-        // const fitsCapacity = device.maxCapacity === 0 || device.maxCapacity === filters.capacity;
+        const fitsCapacity = filters.capacity == null || device.maxCapacity === filters.capacity;
         const fitFunctions = device.functions.includes(filters.functions) || !filters.functions;
 
         return(
-            // fitQuery && fitFunctions && fitsEnergy && fitsCapacity
-        fitQuery && fitFunctions && fitsEnergy
+            fitQuery && fitFunctions && fitsEnergy && fitsCapacity
     );
     })
         .sort((a, b) => {
@@ -70,7 +69,7 @@ const WashingMachines = (): JSX.Element => {
             }
             if(filters.sort === 'capacity') {
                 return(
-                    a.capacity - b.capacity
+                    b.capacity - a.capacity
                 );
             }
             return 0;
@@ -91,7 +90,7 @@ const WashingMachines = (): JSX.Element => {
                 <select value={filters.sort} onChange={e => {setFilters(previous => ({...previous, sort: e.target.value}))}}>
                     <option value="">Sortuj po:</option>
                     <option value="price">Cena</option>
-                    {/*<option value="capacity">Pojemnność</option>*/}
+                    <option value="capacity">Pojemnność</option>
                 </select>
             </div>
             <h2>{washingMachines.length}</h2>
