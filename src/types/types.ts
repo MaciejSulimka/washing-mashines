@@ -27,3 +27,11 @@ export type WashingMachine = {
     image: string;
     imageAltText: string;
 }
+
+export type Filters = {
+    query: string;
+    energyClass: string;
+    functions: string;
+    // capacity: number;
+    sort: string;
+}
