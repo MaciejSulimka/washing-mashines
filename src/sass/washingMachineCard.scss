@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    &--name {
+    &-name {
       font-family: SamsungOne-700, sans-serif;
       color: var(--textBlackColor);
       font-size: 1.8rem;
@@ -23,7 +23,7 @@
   }
 
   &__specification {
-    &--capacity, &--dimensions, &--functions {
+    &-capacity, &-dimensions, &-functions {
       margin: .3em 0;
 
       font-size: 1.2rem;
@@ -41,11 +41,79 @@
     display: flex;
     gap: 1rem;
 
-    &--text {
+    &-text {
       color: var(--textGreyColor);
       font-family: SamsungOne-400, sans-serif;
       font-size: 1.2rem;
 
     }
+  }
+
+  &__payment {
+    &-data {
+      color: var(--textGreyColor);
+      font-family: SamsungOne-400, sans-serif;
+      font-size: 1.2rem;
+    }
+    &-priceWrapper {
+      display: flex;
+      gap: 0.5em;
+    }
+    &-amount {
+      margin: 0;
+      font-weight: normal;
+
+      color: var(--textBlackColor);
+      font-family: SamsungOne-700, sans-serif;
+      font-size: 4rem;
+    }
+    &-restWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &-rest, &-currency {
+      color: var(--textBlackColor);
+      font-family: SamsungOne-700, sans-serif;
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    &-rest {
+      padding-top: 0.7em;
+    }
+    &-currency {
+      padding-bottom: 0.7em;
+      text-align: end;
+    }
+
+    &-installment {
+      margin: 0.5em 0;
+
+      font-family: SamsungOne-700, sans-serif;
+      color: var(--textGreySecondColor);
+      font-size: 1.8rem;
+    }
+  }
+  &__button {
+    border: none;
+    background-color: var(--samsungBlue);
+    color: var(--samsungWhite);
+    font-family: SamsungOne-700, sans-serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    border-radius: 2.4rem;
+    min-width: 158px;
+    margin: 1.5rem 0;
+    cursor: pointer;
+
+    padding: 1em 2em;
+
+    transition: background-color .3s;
+
+  }
+  .selected {
+    background-color: black;
   }
 }

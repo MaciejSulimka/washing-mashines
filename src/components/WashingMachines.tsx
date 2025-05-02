@@ -9,6 +9,7 @@ const WashingMachines = (): JSX.Element => {
 
     const [washingMachines, setWashingMachines] = useState<WashingMachine[]>([])
     const [loading, setLoading] = useState<boolean>(true);
+    const [selectedDevice, setSelectedDevice] = useState<number[]>([])
 
     useEffect(() => {
         const fetchWashingMachines = async () => {
@@ -27,6 +28,18 @@ const WashingMachines = (): JSX.Element => {
        fetchWashingMachines();
     },[])
 
+    const toggleSelected = (id: number) => {
+        setSelectedDevice((previouslySelected) => {
+            const isSelected = previouslySelected.includes(id);
+
+            if(isSelected) {
+                return previouslySelected.filter((selectedId) => selectedId !== id);
+            } else {
+                return [...previouslySelected, id]
+            }
+        })
+    }
+
     if(loading) return(
         <div>
            ŁADOWANIE PRALECZEK MILORDZIE
@@ -38,7 +51,7 @@ const WashingMachines = (): JSX.Element => {
             <div className="washingMachines__container">
 
                 {washingMachines.map((device) => (
-                    <WashingMachineCard device={device} key={device.id}/>
+                    <WashingMachineCard device={device} key={device.id} isSelected={selectedDevice.includes(device.id)} handleTogglle={() => toggleSelected(device.id)}/>
                 ))}
             </div>
 
