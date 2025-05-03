@@ -10,7 +10,6 @@ json-server --watch washingMachines.json --port 8080
 ```
 
 <br>
-<br>
 
 #### <span style="color:#007AFF"> ___ Error Page ___</span>
 ![error page view](/src/img/readme/readme-01.png)
