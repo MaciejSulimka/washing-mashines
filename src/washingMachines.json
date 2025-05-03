@@ -33,8 +33,8 @@
       "id": 2,
       "modelCode": "WW90T754ABT",
       "name": "Pralka QuickDrive™",
-      "capacity": 9,
-      "maxCapacity" : 9,
+      "capacity": 8,
+      "maxCapacity" : 8,
       "color": "biała",
       "dimensions": {
         "depth": 55,
@@ -114,16 +114,16 @@
         "startDate": "01-08-2022",
         "endDate": "07-08-2022"
       },
-      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp",
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first-WRONG-URL-TO-SHOW-PLACEHOLDER.webp",
       "imageAltText": "Front-loading white washing machine with a black door and control panel on top"
     },
     {
       "id": 5,
-      "modelCode": "WW90T754ABT",
-      "name": "Pralka QuickDrive™",
-      "capacity": 9,
-      "maxCapacity" : 9,
-      "color": "biała",
+      "modelCode": "WW90T754GLD",
+      "name": "Pralka GoldSpin",
+      "capacity": 10.5,
+      "maxCapacity" : 10.5,
+      "color": "złota",
       "dimensions": {
         "depth": 55,
         "width": 65,
@@ -134,18 +134,18 @@
         "Panel AI Control",
         "Silnik inwerterowy",
         "Wyświetlacz elektroniczny",
-        "Turbo Wir 3000"
+        "Turbo Wir 3500"
       ],
-      "energyClass": "D",
-      "price": 3599.00,
-      "monthlyInstallment": 59.91,
+      "energyClass": "A",
+      "price": 5599.00,
+      "monthlyInstallment": 93.21,
       "numberOfInstallments": 60,
       "promotion": {
         "startDate": "01-08-2022",
         "endDate": "07-08-2022"
       },
-      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp",
-      "imageAltText": "White front-loading washing machine with a large black door and sleek control panel"
+      "image": "https://storage.cloud.google.com/washign-machines/washing-machine-third.webp",
+      "imageAltText": "White front-loading washing machine with a large gold door and gold control panel"
     },
     {
       "id": 6,
@@ -264,6 +264,154 @@
       },
       "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp",
       "imageAltText": "White front-loading washing machine with a large black door and sleek control panel"
+    },
+    {
+      "id": 10,
+      "modelCode": "WW90T754ABT",
+      "name": "Pralka QuickDrive™",
+      "capacity": 9,
+      "maxCapacity" : 9,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 65,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny",
+        "Turbo Wir 3000"
+      ],
+      "energyClass": "D",
+      "price": 3599.00,
+      "monthlyInstallment": 59.91,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp",
+      "imageAltText": "White front-loading washing machine with a large black door and sleek control panel"
+    },
+    {
+      "id": 11,
+      "modelCode": "WW90T654GLD",
+      "name": "Pralka GoldSpin",
+      "capacity": 9,
+      "maxCapacity" : 9,
+      "color": "złota",
+      "dimensions": {
+        "depth": 55,
+        "width": 65,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny",
+        "Turbo Wir 3500"
+      ],
+      "energyClass": "A",
+      "price": 5099.00,
+      "monthlyInstallment": 85.15,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/washing-machine-third.webp",
+      "imageAltText": "White front-loading washing machine with a large gold door and gold control panel"
+    },
+    {
+      "id": 12,
+      "modelCode": "WW90T554DHE",
+      "name": "Pralka EcoBubble™",
+      "capacity": 7,
+      "maxCapacity" : 7,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 60,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny"
+      ],
+      "energyClass": "F",
+      "price": 2599.00,
+      "monthlyInstallment": 43.91,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp",
+      "imageAltText": "Front-loading white washing machine with a black door and control panel on top"
+    },
+    {
+      "id": 13,
+      "modelCode": "WW90T754ABT",
+      "name": "Pralka QuickDrive™",
+      "capacity": 9,
+      "maxCapacity" : 9,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 65,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny",
+        "Turbo Wir 3000"
+      ],
+      "energyClass": "A",
+      "price": 3799.00,
+      "monthlyInstallment": 63.31,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-second.webp",
+      "imageAltText": "White front-loading washing machine with a large black door and sleek control panel"
+    },
+    {
+      "id": 14,
+      "modelCode": "WW10T454DXT",
+      "name": "Pralka EcoBubble™",
+      "capacity": 7,
+      "maxCapacity" : 7,
+      "color": "biała",
+      "dimensions": {
+        "depth": 55,
+        "width": 60,
+        "height": 85
+      },
+      "functions": [
+        "Drzwi AddWash",
+        "Panel AI Control",
+        "Silnik inwerterowy",
+        "Wyświetlacz elektroniczny"
+      ],
+      "energyClass": "C",
+      "price": 2399.00,
+      "monthlyInstallment": 39.99,
+      "numberOfInstallments": 60,
+      "promotion": {
+        "startDate": "01-08-2022",
+        "endDate": "07-08-2022"
+      },
+      "image": "https://storage.cloud.google.com/washign-machines/waching-machine-first.webp",
+      "imageAltText": "Front-loading white washing machine with a black door and control panel on top"
     }
   ]
 }

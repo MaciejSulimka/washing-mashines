@@ -1,6 +1,7 @@
 import {WashingMachine} from "../types/types";
 import '../sass/washingMachineCard.css';
 import EnergyLabel from "./EnergyLabel";
+import placeholder from '../img/washingMachinePlaceholder.webp';
 
 
 const WashingMachineCard = ({device, isSelected, handleTogglle}: {device: WashingMachine; isSelected: boolean; handleTogglle: () => void}): JSX.Element => {
@@ -16,7 +17,10 @@ const WashingMachineCard = ({device, isSelected, handleTogglle}: {device: Washin
 
     return(
         <div className="washingMachineCard">
-            <img className="washingMachineCard__image" src={device.image} alt={device.imageAltText}/>
+            <img className="washingMachineCard__image" src={device.image} alt={device.imageAltText} onError={(e : any)=> {
+                e.target.onerror = null;
+                e.target.src = placeholder;
+            } }/>
             <div className="washingMachineCard__details">
                 <h3 className="washingMachineCard__details-name">{device.modelCode}, {device.name}, {device.maxCapacity} kg, {device.color}</h3>
                 <div className="washingMachineCard__specification">

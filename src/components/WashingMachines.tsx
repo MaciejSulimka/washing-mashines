@@ -26,21 +26,24 @@ const WashingMachines = (): JSX.Element => {
         sort: '',
     });
 
+    const fetchWashingMachines = async () => {
+        setError(false);
+        setLoading(true);
+
+        try {
+            const response = await fetch(API_URL);
+            const data: WashingMachine[] = await response.json();
+            setWashingMachines(data);
+        } catch (errror) {
+            setError(true);
+            console.log("No washing machines in samsung store :(((((")
+            console.log(errror);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     useEffect(() => {
-        const fetchWashingMachines = async () => {
-            try {
-                const response = await fetch(API_URL);
-                const data: WashingMachine[] = await response.json();
-                setWashingMachines(data);
-            } catch (errror) {
-                setError(true);
-                console.log("No washing machines in samsung store :(((((")
-                console.log(errror);
-            } finally {
-                setLoading(false);
-            }
-        };
         fetchWashingMachines();
     }, [])
 
@@ -92,8 +95,7 @@ const WashingMachines = (): JSX.Element => {
             <h2 className="errorContainer__title">Coś poszło nie tak :(</h2>
             <h3 className="errorContainer__text">Nie udało nam się załadować strony</h3>
             <h3 className="errorContainer__text">To run 'server' change directory to <b>src</b> and run this command: <b>"json-server --watch washingMachines.json --port 8080</b></h3>
-            {/*I should just try to fetch one more time not to reaload the page*/}
-            <button className="errorContainer__button" onClick={() => window.location.reload()}>Spróbuj ponownie</button>
+            <button className="errorContainer__button" onClick={fetchWashingMachines}>Spróbuj ponownie</button>
         </main>
     )
 
