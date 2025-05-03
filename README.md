@@ -28,8 +28,9 @@ json-server --watch washingMachines.json --port 8080
 #### <span style="color:#007AFF"> ___ Select Device ___</span>
 ![selecting device](/src/img/readme/readme-04.png)
 #### <span style="color:#007AFF"> ___ Placeholder Image ___</span>
-![selecting device](/src/img/readme/readme-05.png)
-
+![placeholder image view](/src/img/readme/readme-05.png)
+#### <span style="color:#007AFF"> ___ Mobile View ___</span>
+![mobile view](/src/img/readme/readme-06.png)
 
 
 
