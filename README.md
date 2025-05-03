@@ -1,6 +1,14 @@
 # 🚰 React + TypeScript + Vite Washing Machine App
 <br>
 
+## START AN APP 
+
+### Use this command to run this application 
+
+```
+npm run dev
+```
+
 ## START JSON SERVER
 
 ### Use this command on <b>src</b> directory
