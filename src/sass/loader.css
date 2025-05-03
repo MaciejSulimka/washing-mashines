@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4em 0;
+  padding: 4em 0 4em 0;
 }
 .loader-wrapper .loader {
   width: 59px;

@@ -7,6 +7,7 @@ import washingMachineCard from "./WashingMachineCard";
 import CustomDropdown from "./CustomDropdown";
 import ArrowIcon from '../img/icons/arrow.svg?react';
 import Loader from "./Loader";
+import {API_URL, CapacityOption, EnergyClassOption, FunctionOptions, LOAD_MORE_DEVICES, SortOptions} from "../static";
 
 
 const WashingMachines = (): JSX.Element => {
@@ -15,6 +16,7 @@ const WashingMachines = (): JSX.Element => {
     const [loading, setLoading] = useState<boolean>(true);
     const [selectedDevice, setSelectedDevice] = useState<number[]>([]);
     const [visibleDevices, setVisibleDevices] = useState<number>(6);
+    const [error, setError] = useState<boolean>(false);
     const [filters, setFilters] = useState<Filters>({
         query: '',
         popularity: '',
@@ -28,10 +30,11 @@ const WashingMachines = (): JSX.Element => {
     useEffect(() => {
         const fetchWashingMachines = async () => {
             try {
-                const response = await fetch('http://localhost:8080/washingMachines');
+                const response = await fetch(API_URL);
                 const data: WashingMachine[] = await response.json();
                 setWashingMachines(data);
             } catch (errror) {
+                setError(true);
                 console.log("No washing machines in samsung store :(((((")
                 console.log(errror);
             } finally {
@@ -65,12 +68,12 @@ const WashingMachines = (): JSX.Element => {
         );
     })
         .sort((a, b) => {
-            if (filters.sort === 'price') {
+            if (filters.sort === 'Cena') {
                 return (
                     a.price - b.price
                 );
             }
-            if (filters.sort === 'capacity') {
+            if (filters.sort === 'Pojemność') {
                 return (
                     b.capacity - a.capacity
                 );
@@ -79,8 +82,18 @@ const WashingMachines = (): JSX.Element => {
         })
 
     if (loading) return (
-        <main>
+        <main className="loaderContainer">
             <Loader/>
+        </main>
+    )
+
+    if(error) return (
+        <main className="errorContainer">
+            <h2 className="errorContainer__title">Coś poszło nie tak :(</h2>
+            <h3 className="errorContainer__text">Nie udało nam się załadować strony</h3>
+            <h3 className="errorContainer__text">To run 'server' change directory to <b>src</b> and run this command: <b>"json-server --watch washingMachines.json --port 8080</b></h3>
+            {/*I should just try to fetch one more time not to reaload the page*/}
+            <button className="errorContainer__button" onClick={() => window.location.reload()}>Spróbuj ponownie</button>
         </main>
     )
 
@@ -92,21 +105,21 @@ const WashingMachines = (): JSX.Element => {
                     <input className="washingMachines__searchWrapper__input" type="text" placeholder="Szukaj..." value={filters.query} onChange={e => setFilters(previous => ({...previous, query: e.target.value}))}/>
                 </div>
                 <div className="washingMachines__filters">
-                    <CustomDropdown label="Sortuj po:" option={["price", "capacity"]} select={filters.sort} onChange={(value => {
+                    <CustomDropdown label="Sortuj po:" option={Object.values(SortOptions)} select={filters.sort} onChange={(value => {
                         setFilters(previous => ({...previous, sort: value}) )
                     })}/>
                     <CustomDropdown label="Funkcje:"
-                                    option={["Drzwi AddWash", "Panel AI Control", "Silnik inwererowy", "Wyświetlacz elektroniczny", "Turbo Wir 3000", "Turbo Wir 3500"]}
+                                    option={Object.values(FunctionOptions)}
                                     select={filters.functions} onChange={(value) => {
                         setFilters((previous) => ({...previous, functions: value}))
                     }}/>
                     <CustomDropdown label="Klasa energetyczna:"
-                                    option={["A", "B", "C", "D", "E", "F" ]}
+                                    option={Object.values(EnergyClassOption)}
                                     select={filters.energyClass} onChange={(value) => {
                         setFilters((previous) => ({...previous, energyClass: value}))
                     }}/>
                     <CustomDropdown label="Pojemność:"
-                                    option={["7kg", "8kg", "9kg", "10,5kg"]}
+                                    option={Object.values(CapacityOption)}
                                     select={filters.capacity === 0 ? "" : `${filters.capacity.toString().replace('.', ",")}kg`} onChange={(value) => {
                         //STUPID AS HELL I WOULD TURN BACK TIME AND MAKE CAPACITY AS STRING
                         const numericName = value.replace("kg", '').replace(",",".");
@@ -125,7 +138,7 @@ const WashingMachines = (): JSX.Element => {
                 </div>
                 {visibleDevices < filteredMachines.length && (
                     <div className="washingMachines__showMoreButtonWrapper">
-                        <button className="washingMachines__showMoreButtonWrapper__button" onClick={() => setVisibleDevices(previous => previous + 6)}>Pokaż więcej <ArrowIcon style={{fill: '#007AFF'}}/></button>
+                        <button className="washingMachines__showMoreButtonWrapper__button" onClick={() => setVisibleDevices(previous => previous + LOAD_MORE_DEVICES)}>Pokaż więcej <ArrowIcon style={{fill: '#007AFF'}}/></button>
                     </div>
                 )}
             </section>

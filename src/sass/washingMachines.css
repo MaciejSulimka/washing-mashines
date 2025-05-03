@@ -1,3 +1,47 @@
+.loaderContainer {
+  margin-top: 10em;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 14em;
+}
+.errorContainer__title {
+  font-weight: normal;
+  font-family: SamsungOne-700, sans-serif;
+  font-size: 3rem;
+  color: var(--textBlueColor);
+  margin: 0;
+}
+.errorContainer__text {
+  font-weight: normal;
+  font-family: SamsungOne-400, sans-serif;
+  font-size: 2rem;
+  color: var(--textBlackColor);
+}
+.errorContainer__text b {
+  font-weight: normal;
+  color: var(--textBlueColor);
+}
+.errorContainer__button {
+  background-color: var(--samsungBlue);
+  border: none;
+  padding: 1em 2em;
+  border-radius: 2.4rem;
+  color: var(--samsungWhite);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-top: 4em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.errorContainer__button:hover {
+  background-color: var(--samsungDark);
+}
+
 .washingMachines {
   display: flex;
   align-items: center;
